@@ -1,5 +1,6 @@
 import { Serie } from "./Ejercicio1/serie";
 import { Videojuego } from "./Ejercicio1/videojuego";
+import { Libro } from "./Ejercicio2/libro";
 
 let series: Serie[] = [];
 
@@ -51,7 +52,6 @@ series.forEach(a => {
       mayor = a;
   }
 });
-
 console.log(mayor.getTitulo() + " Es la serie con más temporadas")
 
 videojuegos.forEach(a => {
@@ -59,5 +59,29 @@ videojuegos.forEach(a => {
       mashoras = a;
   }
 });
-
 console.log(mashoras.getTitulo() + " Es el videojuego con más horas")
+
+console.log("(>'')>------------------------------------------------------------<(''<)")
+
+let libros: Libro[] = [];
+
+libros.push(new Libro("00873201098", 500, "Sapiens", "Yuval Noah Harari"));
+libros.push(new Libro("00763948293", 860, "La madre de Frankenstein", "Almudena Grandes"));
+
+var novela: Libro = libros[1]
+var novela2: Libro = libros[0]
+console.log(novela.toString()); 
+
+/*libros.forEach(elemento =>{
+  if(elemento.getPaginas < novela.getPaginas){
+    console.log(novela + "es el libro que tiene más páginas")
+  }else{
+    console.log(elemento + "es el libro que teine más páginas")
+  }
+})*/
+
+if(novela.getPaginas > novela2.getPaginas){
+  console.log(novela.getTitulo() + " es el libro con más páginas")
+}else{
+  console.log(novela2.getTitulo() + " es el libro con más páginas")
+}
