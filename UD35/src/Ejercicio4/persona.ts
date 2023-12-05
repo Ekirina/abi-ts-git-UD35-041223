@@ -18,8 +18,8 @@ export class Persona {
     return this.nombre;
     }
             
-    setTitulo(titulo: string): void {
-    this.TITULO = titulo;
+    setNombre(nombre: string): void {
+    this.NOMBRE = nombre;
     }
         
     getEdad(): number {
