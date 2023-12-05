@@ -1,6 +1,7 @@
 import { Serie } from "./Ejercicio1/serie";
 import { Videojuego } from "./Ejercicio1/videojuego";
 import { Libro } from "./Ejercicio2/libro";
+import { Raices } from "./Ejercicio3/raices";
 
 let series: Serie[] = [];
 
@@ -72,16 +73,24 @@ var novela: Libro = libros[1]
 var novela2: Libro = libros[0]
 console.log(novela.toString()); 
 
-/*libros.forEach(elemento =>{
-  if(elemento.getPaginas < novela.getPaginas){
-    console.log(novela + "es el libro que tiene más páginas")
-  }else{
-    console.log(elemento + "es el libro que teine más páginas")
-  }
-})*/
-
 if(novela.getPaginas > novela2.getPaginas){
   console.log(novela.getTitulo() + " es el libro con más páginas")
 }else{
   console.log(novela2.getTitulo() + " es el libro con más páginas")
 }
+
+console.log("(>'')>------------------------------------------------------------<(''<)")
+
+let raiz: Raices[] = [];
+
+raiz.push(new Raices(1, 2, 3))
+raiz.push(new Raices(1, 4, 4))
+raiz.push(new Raices(3, 10, 8))
+
+var solucion0: Raices = raiz[0];
+var solucion1: Raices = raiz[1];
+var solucion2: Raices = raiz[2];
+
+console.log(solucion0.calcular());
+console.log(solucion1.obtenerRaiz());
+console.log(solucion2.obtenerRaices());
